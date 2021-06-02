@@ -2381,7 +2381,13 @@ blockquote footer cite:before {
   transform: scale(1.1);
 }
 #recent-posts > .recent-post-item .left_radius {
-  border-radius: 8px 0 0 8px;
+  -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  -o-box-ordinal-group: 2;
+  -ms-flex-order: 2;
+  -webkit-order: 2;
+  order: 2;
+  border-radius: 0 8px 8px 0;
 }
 #recent-posts > .recent-post-item .right_radius {
   -webkit-box-ordinal-group: 2;
@@ -3140,6 +3146,22 @@ blockquote footer cite:before {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+.page .card-categories {
+  -webkit-box-ordinal-group: -9;
+  -moz-box-ordinal-group: -9;
+  -o-box-ordinal-group: -9;
+  -ms-flex-order: -9;
+  -webkit-order: -9;
+  order: -9;
+}
+.page .card-tags {
+  -webkit-box-ordinal-group: -10;
+  -moz-box-ordinal-group: -10;
+  -o-box-ordinal-group: -10;
+  -ms-flex-order: -10;
+  -webkit-order: -10;
+  order: -10;
 }
 @-moz-keyframes more-btn-move {
   0%, 100% {
