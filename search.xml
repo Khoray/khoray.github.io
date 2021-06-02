@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>[MySQL] 安装&amp;环境配置</title>
+    <url>/2021/06/02/MySQL-%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h2 id="安装">安装</h2>
+<h3 id="进入官网下载社区版"><a href="https://dev.mysql.com/downloads/mysql/">进入官网下载社区版</a></h3>
+<img src="https://pic-1254245913.cos.ap-shanghai.myqcloud.com/img/image-20210602215516371.png" alt="image-20210602215516371" style="zoom:50%;" />
+<h3 id="解压到全英文目录">解压到全英文目录</h3>
+<p><img src="https://pic-1254245913.cos.ap-shanghai.myqcloud.com/img/image-20210602220055413.png" alt="image-20210602220055413"></p>
+<h3 id="至此，下载安装完成">至此，下载安装完成</h3>
+<h2 id="环境配置">环境配置</h2>
+<h3 id="安装mysql服务">安装mysql服务</h3>
+<p>用<strong>管理员身份</strong>打开CMD，CD到bin目录下，输入：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">mysqld --install</span><br></pre></td></tr></table></figure>
+<h3 id="初始化mysql并启动">初始化mysql并启动</h3>
+<p>CMD输入：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">mysqld --initialize --console</span><br></pre></td></tr></table></figure>
+<p><img src="https://pic-1254245913.cos.ap-shanghai.myqcloud.com/img/image-20210602220544013.png" alt="image-20210602220544013"></p>
+<p>记住这里的initial密码，开启服务</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> <span class="built_in">start</span> mysql</span><br></pre></td></tr></table></figure>
+<h3 id="登录验证">登录验证</h3>
+<p>输入：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">mysql -u root -p</span><br><span class="line">(your password)</span><br></pre></td></tr></table></figure>
+<p><img src="https://pic-1254245913.cos.ap-shanghai.myqcloud.com/img/image-20210602220711521.png" alt="image-20210602220711521"></p>
+<h3 id="至此，环境配置结束，MySQL基本环境搭建完成">至此，环境配置结束，MySQL基本环境搭建完成</h3>
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[CFR705div2]题解A-E</title>
     <url>/2021/06/02/%5BCFR705div2%5D%E9%A2%98%E8%A7%A3A-E/</url>
     <content><![CDATA[<h2 id="CF-round-705-div2">CF round 705 div2</h2>
@@ -44,38 +76,6 @@ II.L\in[r+1, r+2]:由base可知，ans=r+2
       </categories>
       <tags>
         <tag>CF</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[MySQL] 安装&amp;环境配置</title>
-    <url>/2021/06/02/MySQL-%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h2 id="安装">安装</h2>
-<h3 id="进入官网下载社区版"><a href="https://dev.mysql.com/downloads/mysql/">进入官网下载社区版</a></h3>
-<img src="https://pic-1254245913.cos.ap-shanghai.myqcloud.com/img/image-20210602215516371.png" alt="image-20210602215516371" style="zoom:50%;" />
-<h3 id="解压到全英文目录">解压到全英文目录</h3>
-<p><img src="https://pic-1254245913.cos.ap-shanghai.myqcloud.com/img/image-20210602220055413.png" alt="image-20210602220055413"></p>
-<h3 id="至此，下载安装完成">至此，下载安装完成</h3>
-<h2 id="环境配置">环境配置</h2>
-<h3 id="安装mysql服务">安装mysql服务</h3>
-<p>用<strong>管理员身份</strong>打开CMD，CD到bin目录下，输入：</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">mysqld --install</span><br></pre></td></tr></table></figure>
-<h3 id="初始化mysql并启动">初始化mysql并启动</h3>
-<p>CMD输入：</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">mysqld --initialize --console</span><br></pre></td></tr></table></figure>
-<p><img src="https://pic-1254245913.cos.ap-shanghai.myqcloud.com/img/image-20210602220544013.png" alt="image-20210602220544013"></p>
-<p>记住这里的initial密码，开启服务</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> <span class="built_in">start</span> mysql</span><br></pre></td></tr></table></figure>
-<h3 id="登录验证">登录验证</h3>
-<p>输入：</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">mysql -u root -p</span><br><span class="line">(your password)</span><br></pre></td></tr></table></figure>
-<p><img src="https://pic-1254245913.cos.ap-shanghai.myqcloud.com/img/image-20210602220711521.png" alt="image-20210602220711521"></p>
-<h3 id="至此，环境配置结束，MySQL基本环境搭建完成">至此，环境配置结束，MySQL基本环境搭建完成</h3>
-]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
