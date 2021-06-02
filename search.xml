@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>我的第一个博客</title>
-    <url>/2021/06/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<p>博客搭建参考： <a class="btn-beautify button--animated red larger" href="https://www.bearchild.top/2021/05/20/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/Github+Hexo%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/" 
-  title="BearChild建站记录"><i class="far fa-hand-point-right"></i><span>BearChild建站记录</span></a></p>
-]]></content>
-      <categories>
-        <category>网站搭建</category>
-      </categories>
-      <tags>
-        <tag>网站搭建</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[MySQL] 安装&amp;环境配置</title>
     <url>/2021/06/02/MySQL-%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<h2 id="安装">安装</h2>
@@ -89,6 +76,19 @@ II.L\in[r+1, r+2]:由base可知，ans=r+2
       </categories>
       <tags>
         <tag>CF</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的第一个博客</title>
+    <url>/2021/06/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<p>博客搭建参考： <a class="btn-beautify button--animated red larger" href="https://www.bearchild.top/2021/05/20/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/Github+Hexo%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/" 
+  title="BearChild建站记录"><i class="far fa-hand-point-right"></i><span>BearChild建站记录</span></a></p>
+]]></content>
+      <categories>
+        <category>网站搭建</category>
+      </categories>
+      <tags>
+        <tag>网站搭建</tag>
       </tags>
   </entry>
 </search>
