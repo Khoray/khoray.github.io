@@ -78,6 +78,15 @@
       </tags>
   </entry>
   <entry>
+    <title>序 / Introduction</title>
+    <url>//about/</url>
+    <content><![CDATA[<blockquote><center>在自己消失之前<br>心怀不想消失的愿望<br>希望让某个人记住我<br>希望能留下羁绊<br>我这么希望着<br>又有什么不可以的吗</center></blockquote>
+<center>你好 欢迎来到Khoray's Blog</center>
+<center>这里会发一些学习心得 题解 技术文章</center>
+<center>望持续关注0.0</center>
+]]></content>
+  </entry>
+  <entry>
     <title>[CFR705div2]题解A-E</title>
     <url>/2021/06/02/%5BCFR705div2%5D%E9%A2%98%E8%A7%A3A-E/</url>
     <content><![CDATA[<h2 id="CF-round-705-div2">CF round 705 div2</h2>
@@ -117,10 +126,11 @@ II.L\in[r+1, r+2]:由base可知，ans=r+2
 <p>III.若l=r,则答案为r</p>
 ]]></content>
       <categories>
+        <category>题解</category>
         <category>CF题解</category>
       </categories>
       <tags>
-        <tag>CF</tag>
+        <tag>CF题解</tag>
       </tags>
   </entry>
   <entry>
@@ -137,13 +147,13 @@ II.L\in[r+1, r+2]:由base可知，ans=r+2
       </tags>
   </entry>
   <entry>
-    <title>categories</title>
-    <url>/categories/index.html</url>
+    <title>tags</title>
+    <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>tags</title>
-    <url>/tags/index.html</url>
+    <title>categories</title>
+    <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
 </search>
