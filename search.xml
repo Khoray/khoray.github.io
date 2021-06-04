@@ -46,38 +46,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[MySQL] 安装&amp;环境配置</title>
-    <url>/2021/06/02/MySQL-%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h2 id="安装">安装</h2>
-<h3 id="进入官网下载社区版"><a href="https://dev.mysql.com/downloads/mysql/">进入官网下载社区版</a></h3>
-<img src="https://pic-1254245913.cos.ap-shanghai.myqcloud.com/img/image-20210602215516371.png" alt="image-20210602215516371" style="zoom:50%;" />
-<h3 id="解压到全英文目录">解压到全英文目录</h3>
-<p><img src="https://pic-1254245913.cos.ap-shanghai.myqcloud.com/img/image-20210602220055413.png" alt="image-20210602220055413"></p>
-<h3 id="至此，下载安装完成">至此，下载安装完成</h3>
-<h2 id="环境配置">环境配置</h2>
-<h3 id="安装mysql服务">安装mysql服务</h3>
-<p>用<strong>管理员身份</strong>打开CMD，CD到bin目录下，输入：</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">mysqld --install</span><br></pre></td></tr></table></figure>
-<h3 id="初始化mysql并启动">初始化mysql并启动</h3>
-<p>CMD输入：</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">mysqld --initialize --console</span><br></pre></td></tr></table></figure>
-<p><img src="https://pic-1254245913.cos.ap-shanghai.myqcloud.com/img/image-20210602220544013.png" alt="image-20210602220544013"></p>
-<p>记住这里的initial密码，开启服务</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> <span class="built_in">start</span> mysql</span><br></pre></td></tr></table></figure>
-<h3 id="登录验证">登录验证</h3>
-<p>输入：</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">mysql -u root -p</span><br><span class="line">(your password)</span><br></pre></td></tr></table></figure>
-<p><img src="https://pic-1254245913.cos.ap-shanghai.myqcloud.com/img/image-20210602220711521.png" alt="image-20210602220711521"></p>
-<h3 id="至此，环境配置结束，MySQL基本环境搭建完成">至此，环境配置结束，MySQL基本环境搭建完成</h3>
-]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>序 / Introduction</title>
     <url>//about/</url>
     <content><![CDATA[<blockquote><center>在自己消失之前<br>心怀不想消失的愿望<br>希望让某个人记住我<br>希望能留下羁绊<br>我这么希望着<br>又有什么不可以的吗</center></blockquote>
@@ -134,6 +102,38 @@ II.L\in[r+1, r+2]:由base可知，ans=r+2
       </tags>
   </entry>
   <entry>
+    <title>[MySQL] 安装&amp;环境配置</title>
+    <url>/2021/06/02/MySQL-%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h2 id="安装">安装</h2>
+<h3 id="进入官网下载社区版"><a href="https://dev.mysql.com/downloads/mysql/">进入官网下载社区版</a></h3>
+<img src="https://pic-1254245913.cos.ap-shanghai.myqcloud.com/img/image-20210602215516371.png" alt="image-20210602215516371" style="zoom:50%;" />
+<h3 id="解压到全英文目录">解压到全英文目录</h3>
+<p><img src="https://pic-1254245913.cos.ap-shanghai.myqcloud.com/img/image-20210602220055413.png" alt="image-20210602220055413"></p>
+<h3 id="至此，下载安装完成">至此，下载安装完成</h3>
+<h2 id="环境配置">环境配置</h2>
+<h3 id="安装mysql服务">安装mysql服务</h3>
+<p>用<strong>管理员身份</strong>打开CMD，CD到bin目录下，输入：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">mysqld --install</span><br></pre></td></tr></table></figure>
+<h3 id="初始化mysql并启动">初始化mysql并启动</h3>
+<p>CMD输入：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">mysqld --initialize --console</span><br></pre></td></tr></table></figure>
+<p><img src="https://pic-1254245913.cos.ap-shanghai.myqcloud.com/img/image-20210602220544013.png" alt="image-20210602220544013"></p>
+<p>记住这里的initial密码，开启服务</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> <span class="built_in">start</span> mysql</span><br></pre></td></tr></table></figure>
+<h3 id="登录验证">登录验证</h3>
+<p>输入：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">mysql -u root -p</span><br><span class="line">(your password)</span><br></pre></td></tr></table></figure>
+<p><img src="https://pic-1254245913.cos.ap-shanghai.myqcloud.com/img/image-20210602220711521.png" alt="image-20210602220711521"></p>
+<h3 id="至此，环境配置结束，MySQL基本环境搭建完成">至此，环境配置结束，MySQL基本环境搭建完成</h3>
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我的第一个博客</title>
     <url>/2021/06/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<p>博客搭建参考： <a class="btn-beautify button--animated red larger" href="https://www.bearchild.top/2021/05/20/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/Github+Hexo%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/" 
@@ -147,13 +147,13 @@ II.L\in[r+1, r+2]:由base可知，ans=r+2
       </tags>
   </entry>
   <entry>
-    <title>tags</title>
-    <url>/tags/index.html</url>
+    <title>categories</title>
+    <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>categories</title>
-    <url>/categories/index.html</url>
+    <title>tags</title>
+    <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
 </search>

@@ -8,6 +8,17 @@ img {
         default;
 }
 
+/*字体*/
+@font-face{
+  font-family:'ZhuZiAYuanJWD' ;  /* 字体名自定义即可 */
+  src:url('https://cdn.jsdelivr.net/gh/khoray/HexoStaticFile@main/fonts/ZhuZiAYuanJWD.ttf'); /* 字体文件路径 */
+  font-display : swap;
+} 
+
+h1#site-title {
+  font-family: 'ZhuZiAYuanJWD'!important;
+}
+
 /* 页脚footer */
 #footer {
     background-size: 0% 0%;
@@ -74,13 +85,3 @@ div#category{
     }
 
 
-/*字体*/
-@font-face{
-  font-family:'ZhuZiAYuanJWD' ;  /* 字体名自定义即可 */
-  src:url('/fonts/ZhuZiAYuanJWD.ttf'); /* 字体文件路径 */
-  font-display : swap;
-} 
-
-h1#site-title {
-  font-family: 'ZhuZiAYuanJWD';
-}
