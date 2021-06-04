@@ -85,3 +85,7 @@ div#category{
     }
 
 
+#post-comment {
+  /* 字体大小 */
+  --waline-font-size: 20px;
+}
