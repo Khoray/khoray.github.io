@@ -36,6 +36,9 @@ h1#site-title {
 
 /* 首页文章卡片 */
 #recent-posts > .recent-post-item{
+    height: auto;
+    padding-bottom: 1cm;
+    padding-top: 1cm;
     background:rgba(255, 255, 255, 0.85);
 }
 /* 首页侧栏卡片 */
