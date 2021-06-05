@@ -1,161 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>git的使用</title>
-      <link href="/githelp/"/>
-      <url>/githelp/</url>
-      
-        <content type="html"><![CDATA[<h2 id="git的基本使用"><a href="#git的基本使用" class="headerlink" title="git的基本使用"></a>git的基本使用</h2><ol><li><p>git初始化</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure></li><li><p>git添加/删除文件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add/rm [filename]</span><br></pre></td></tr></table></figure></li><li><p>git commit</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;commit content&quot;</span><br></pre></td></tr></table></figure></li><li><p>git远程连接</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add [shortname] [url]</span><br></pre></td></tr></table></figure></li><li><p>git设置config</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git config --global [key] [value]</span><br><span class="line">git config --global user.name [value]  //username</span><br><span class="line">git config --global user.mail [value]  //usermail</span><br><span class="line">git config --global http.proxy [value] //proxy</span><br><span class="line">git config --global https.proxy [value]//proxy</span><br></pre></td></tr></table></figure></li><li><p>git push</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u [shortname] [branch]</span><br></pre></td></tr></table></figure></li></ol>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>CQU2021ACM校赛题解</title>
-      <link href="2021/06/02/CQU2021ACM%E6%A0%A1%E8%B5%9B%E9%A2%98%E8%A7%A3/"/>
-      <url>2021/06/02/CQU2021ACM%E6%A0%A1%E8%B5%9B%E9%A2%98%E8%A7%A3/</url>
-      
-        <content type="html"><![CDATA[<h1 id="第18届-CQU-ACM-校赛-题解"><a href="#第18届-CQU-ACM-校赛-题解" class="headerlink" title="第18届 CQU ACM 校赛 题解"></a>第18届 CQU ACM 校赛 题解</h1><p>题目链接：<a href="https://cquoj.cqucsa.club/contest_show.php?cid=320#info">外网</a></p><h2 id="A"><a href="#A" class="headerlink" title="A"></a>A</h2><p>A确定时，B也确定了，直接枚举A即可。复杂度$O(T|X|)$</p><h2 id="B"><a href="#B" class="headerlink" title="B"></a>B</h2><p>二分爆搜</p><p>对于每条项链上的字母，可以用长度为$26$的$01$串来表示，第$i$个数表示字母表中第$i$个字母出现的次数$\pmod2$于是我们要前$\frac{n}{2}$与后$\frac{n}{2}$个异或相同的种类数，分别爆搜即可。</p><p>复杂度$O(2\times2^{20})$</p><h2 id="C"><a href="#C" class="headerlink" title="C"></a>C</h2><p>可以证明，第3~n个数对期望的贡献是0，第一个数是a[1]，第二个数是-a[2]</p><p>输出a[1]-a[2]即可</p><h2 id="D"><a href="#D" class="headerlink" title="D"></a>D</h2><p>最小生成树模板</p><h2 id="E"><a href="#E" class="headerlink" title="E"></a>E</h2><p>从起点开始把，接下来能到的点加入到小根堆，每次从小根堆取最小的判断能不能吃，如此循环，直到不能吃。</p><h2 id="F"><a href="#F" class="headerlink" title="F"></a>F</h2><p>贪心，交换一对01，有两种方式，一种是cost = a， 一种是cost = distance * (a - b)，并且我们能证明cost = a的方式交换的01越远越好。cost = distance * (a - b)的越近越好。直接two pointer从两侧向中间靠拢，中途遇到01就判断一下哪个方式消耗小即可。</p><h2 id="G"><a href="#G" class="headerlink" title="G"></a>G</h2><p>t &lt;= 300 dp，状态可设为dp[i][j]表示，i秒，到达j位置最小消耗，转移和枚举j可以形成nlogn无穷级数，复杂度$O(tdlogd)$</p><p>t &gt; 300 枚举，每次加速最多加1，随便搞搞</p><h2 id="H"><a href="#H" class="headerlink" title="H"></a>H</h2><p>根据异或性质$3x\oplus x=2x \equiv 3x=2x\oplus x$</p><p>$3x$可以看做错位相加，$2x\oplus x$可以看做错位异或，二者相等的条件就是$x$的二进制形式中，没有相邻的1</p><p>直接dp即可</p><h2 id="I"><a href="#I" class="headerlink" title="I"></a>I</h2><p>坐标变换，把题目的斜坐标变成直角坐标，对$x或y$排序后，枚举每个点，用线段树维护$x或y$小于这个点的点的dis值，取max+1则是这个点的dis值，需要单点修改，区间查询。</p><h2 id="J"><a href="#J" class="headerlink" title="J"></a>J</h2><p>题目翻译：</p><p>给一串序列，求所有的连续的子序列中，在其中的个数恰好为2的数字的种类最多的一个连续子序列。输出种类数。</p><p>考虑每种数字对答案的贡献。只有选两个的时候才有1的贡献。我们可以在序列上枚举子序列的右端点，如果左端点跨过了2个相同数字，该数字的贡献就+1，跨过第三个的时候贡献-1，因此可以将目前右端点之前的倒数第一个等于右端点的数字之前的位置答案+1，倒数第二个等于右端点数字之前的位置答案-1。再查询左侧能取到的最大值即可。区间修改区间查询。线段树维护即可。</p><h2 id="K"><a href="#K" class="headerlink" title="K"></a>K</h2><p>dp随便搞搞就可。</p>]]></content>
-      
-      
+<search>
+  <entry>
+    <title>CQU2021ACM校赛题解</title>
+    <url>/2021/06/02/CQU2021ACM%E6%A0%A1%E8%B5%9B%E9%A2%98%E8%A7%A3/</url>
+    <content><![CDATA[<h1 id="第18届-CQU-ACM-校赛-题解"><a href="#第18届-CQU-ACM-校赛-题解" class="headerlink" title="第18届 CQU ACM 校赛 题解"></a>第18届 CQU ACM 校赛 题解</h1><p>题目链接：<a href="https://cquoj.cqucsa.club/contest_show.php?cid=320#info">外网</a></p>
+<h2 id="A"><a href="#A" class="headerlink" title="A"></a>A</h2><p>A确定时，B也确定了，直接枚举A即可。复杂度$O(T|X|)$</p>
+<h2 id="B"><a href="#B" class="headerlink" title="B"></a>B</h2><p>二分爆搜</p>
+<p>对于每条项链上的字母，可以用长度为$26$的$01$串来表示，第$i$个数表示字母表中第$i$个字母出现的次数$\pmod2$于是我们要前$\frac{n}{2}$与后$\frac{n}{2}$个异或相同的种类数，分别爆搜即可。</p>
+<p>复杂度$O(2\times2^{20})$</p>
+<h2 id="C"><a href="#C" class="headerlink" title="C"></a>C</h2><p>可以证明，第3~n个数对期望的贡献是0，第一个数是a[1]，第二个数是-a[2]</p>
+<p>输出a[1]-a[2]即可</p>
+<h2 id="D"><a href="#D" class="headerlink" title="D"></a>D</h2><p>最小生成树模板</p>
+<h2 id="E"><a href="#E" class="headerlink" title="E"></a>E</h2><p>从起点开始把，接下来能到的点加入到小根堆，每次从小根堆取最小的判断能不能吃，如此循环，直到不能吃。</p>
+<h2 id="F"><a href="#F" class="headerlink" title="F"></a>F</h2><p>贪心，交换一对01，有两种方式，一种是cost = a， 一种是cost = distance * (a - b)，并且我们能证明cost = a的方式交换的01越远越好。cost = distance * (a - b)的越近越好。直接two pointer从两侧向中间靠拢，中途遇到01就判断一下哪个方式消耗小即可。</p>
+<h2 id="G"><a href="#G" class="headerlink" title="G"></a>G</h2><p>t &lt;= 300 dp，状态可设为dp[i][j]表示，i秒，到达j位置最小消耗，转移和枚举j可以形成nlogn无穷级数，复杂度$O(tdlogd)$</p>
+<p>t &gt; 300 枚举，每次加速最多加1，随便搞搞</p>
+<h2 id="H"><a href="#H" class="headerlink" title="H"></a>H</h2><p>根据异或性质$3x\oplus x=2x \equiv 3x=2x\oplus x$</p>
+<p>$3x$可以看做错位相加，$2x\oplus x$可以看做错位异或，二者相等的条件就是$x$的二进制形式中，没有相邻的1</p>
+<p>直接dp即可</p>
+<h2 id="I"><a href="#I" class="headerlink" title="I"></a>I</h2><p>坐标变换，把题目的斜坐标变成直角坐标，对$x或y$排序后，枚举每个点，用线段树维护$x或y$小于这个点的点的dis值，取max+1则是这个点的dis值，需要单点修改，区间查询。</p>
+<h2 id="J"><a href="#J" class="headerlink" title="J"></a>J</h2><p>题目翻译：</p>
+<p>给一串序列，求所有的连续的子序列中，在其中的个数恰好为2的数字的种类最多的一个连续子序列。输出种类数。</p>
+<p>考虑每种数字对答案的贡献。只有选两个的时候才有1的贡献。我们可以在序列上枚举子序列的右端点，如果左端点跨过了2个相同数字，该数字的贡献就+1，跨过第三个的时候贡献-1，因此可以将目前右端点之前的倒数第一个等于右端点的数字之前的位置答案+1，倒数第二个等于右端点数字之前的位置答案-1。再查询左侧能取到的最大值即可。区间修改区间查询。线段树维护即可。</p>
+<h2 id="K"><a href="#K" class="headerlink" title="K"></a>K</h2><p>dp随便搞搞就可。</p>
+]]></content>
       <categories>
-          
-          <category> 题解 </category>
-          
-          <category> CQU校赛 </category>
-          
+        <category>题解</category>
+        <category>CQU校赛</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> CQU校赛 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>[CFR705div2]题解A-E</title>
-      <link href="2021/06/02/%5BCFR705div2%5D%E9%A2%98%E8%A7%A3A-E/"/>
-      <url>2021/06/02/%5BCFR705div2%5D%E9%A2%98%E8%A7%A3A-E/</url>
-      
-        <content type="html"><![CDATA[<h2 id="CF-round-705-div2"><a href="#CF-round-705-div2" class="headerlink" title="CF round 705 div2"></a>CF round 705 div2</h2><h3 id="A"><a href="#A" class="headerlink" title="A"></a>A</h3><p>所有数小于$k$的集合的任意子集和不等于$k$的数最多有$\lceil \frac{k}{2}\rceil$个（$i和k-i只能存在一个$），注意到$n \geq k$ ，对于小于$k$的数，直接选$\lceil \frac{k}{2}\rceil$到$k-1$，对于大于$k$的数一定可以选。</p><h3 id="B"><a href="#B" class="headerlink" title="B"></a>B</h3><p>模拟</p><h3 id="C"><a href="#C" class="headerlink" title="C"></a>C</h3><p>如果当前位修改之后大于未修改的，那么这一位后面的所有位置都可以随便填字母；考虑到字典序最小，直接从后往前扫，假如当前扫到第$i$位（从右往左数，从1开始），枚举比这一位更大的字母，那么第$1到i-1$位可以随便填。只要能把前面的每个字母的数量补充到能够整除$k$那就直接输出。</p><p>复杂度 $ O(26\times N) $</p><p>此处需注意维护一下需要补充的数量，如果每次都计算一下补充的数量，复杂度则为 $ O(26\times 26\times N) $ 。</p><h3 id="D"><a href="#D" class="headerlink" title="D"></a>D</h3><p>为每个质数因子维护一个数据结构。维护该质数 $ p $ 在位置 $ i $ 的最大 $ k_i $ ，使得 $ p^{k_i}|a_i $ 显然 $ \gcd={\prod_{p}{\min{k_i}}} $  每次乘以一个数 $ x $ 的时候，分解 $ x $ ，对 $ x $ 的每个因子进行维护，并且查该因子的 $ \min{k_i} $ 并更新 $ \gcd $</p><h3 id="E"><a href="#E" class="headerlink" title="E"></a>E</h3><p>如果[l,r]中l和r的最高位不同，则答案为$11…1(直接取01…1\oplus10..0)$。</p><p>如果相同：</p><p>1）如果r为奇数，则答案为r。</p><p>证明：（数学归纳法）</p><p><img src="https://pic-1254245913.cos.ap-shanghai.myqcloud.com/img/image-20210604235158513.png" alt="image-20210604235158513"></p><p>2）如果r为偶数</p><p>I.若l&lt;=r-2,答案为r+1：</p><p>证明:我们直接选取[r-2,r]，此时答案为r+1，又由1)III中的R=r+1情形可知ans&lt;r+2，则最大为r+1</p><p>II.若l=r-1,则可选区间为[l+1,l+1]，[l,l+1],[l,l]，其中最大为[l+1,l+1]，答案为r</p><p>III.若l=r,则答案为r</p>]]></content>
-      
-      
+      <tags>
+        <tag>CQU校赛</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[MySQL] 安装&amp;环境配置</title>
+    <url>/2021/06/02/MySQL-%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="进入官网下载社区版"><a href="#进入官网下载社区版" class="headerlink" title="进入官网下载社区版"></a><a href="https://dev.mysql.com/downloads/mysql/">进入官网下载社区版</a></h3><p><img src="https://pic-1254245913.cos.ap-shanghai.myqcloud.com/img/image-20210602215516371.png" alt="image-20210602215516371" style="zoom:50%;" /></p>
+<h3 id="解压到全英文目录"><a href="#解压到全英文目录" class="headerlink" title="解压到全英文目录"></a>解压到全英文目录</h3><p><img src="https://pic-1254245913.cos.ap-shanghai.myqcloud.com/img/image-20210602220055413.png" alt="image-20210602220055413"></p>
+<h3 id="至此，下载安装完成"><a href="#至此，下载安装完成" class="headerlink" title="至此，下载安装完成"></a>至此，下载安装完成</h3><h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h3 id="安装mysql服务"><a href="#安装mysql服务" class="headerlink" title="安装mysql服务"></a>安装mysql服务</h3><p>  用<strong>管理员身份</strong>打开CMD，CD到bin目录下，输入：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">mysqld --install</span><br></pre></td></tr></table></figure>
+<h3 id="初始化mysql并启动"><a href="#初始化mysql并启动" class="headerlink" title="初始化mysql并启动"></a>初始化mysql并启动</h3><p>CMD输入：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">mysqld --initialize --console</span><br></pre></td></tr></table></figure>
+<p><img src="https://pic-1254245913.cos.ap-shanghai.myqcloud.com/img/image-20210602220544013.png" alt="image-20210602220544013"></p>
+<p>记住这里的initial密码，开启服务</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">net</span> <span class="built_in">start</span> mysql</span><br></pre></td></tr></table></figure>
+<h3 id="登录验证"><a href="#登录验证" class="headerlink" title="登录验证"></a>登录验证</h3><p>输入：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">mysql -u root -p</span><br><span class="line">(your password)</span><br></pre></td></tr></table></figure>
+<p><img src="https://pic-1254245913.cos.ap-shanghai.myqcloud.com/img/image-20210602220711521.png" alt="image-20210602220711521"></p>
+<h3 id="至此，环境配置结束，MySQL基本环境搭建完成"><a href="#至此，环境配置结束，MySQL基本环境搭建完成" class="headerlink" title="至此，环境配置结束，MySQL基本环境搭建完成"></a>至此，环境配置结束，MySQL基本环境搭建完成</h3>]]></content>
       <categories>
-          
-          <category> 题解 </category>
-          
-          <category> CF题解 </category>
-          
+        <category>MySQL</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> CF题解 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>[MySQL] 安装&amp;环境配置</title>
-      <link href="2021/06/02/MySQL-%E5%AE%89%E8%A3%85/"/>
-      <url>2021/06/02/MySQL-%E5%AE%89%E8%A3%85/</url>
-      
-        <content type="html"><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="进入官网下载社区版"><a href="#进入官网下载社区版" class="headerlink" title="进入官网下载社区版"></a><a href="https://dev.mysql.com/downloads/mysql/">进入官网下载社区版</a></h3><p><img src="https://pic-1254245913.cos.ap-shanghai.myqcloud.com/img/image-20210602215516371.png" alt="image-20210602215516371" style="zoom:50%;" /></p><h3 id="解压到全英文目录"><a href="#解压到全英文目录" class="headerlink" title="解压到全英文目录"></a>解压到全英文目录</h3><p><img src="https://pic-1254245913.cos.ap-shanghai.myqcloud.com/img/image-20210602220055413.png" alt="image-20210602220055413"></p><h3 id="至此，下载安装完成"><a href="#至此，下载安装完成" class="headerlink" title="至此，下载安装完成"></a>至此，下载安装完成</h3><h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h3 id="安装mysql服务"><a href="#安装mysql服务" class="headerlink" title="安装mysql服务"></a>安装mysql服务</h3><p>  用<strong>管理员身份</strong>打开CMD，CD到bin目录下，输入：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld --install</span><br></pre></td></tr></table></figure><h3 id="初始化mysql并启动"><a href="#初始化mysql并启动" class="headerlink" title="初始化mysql并启动"></a>初始化mysql并启动</h3><p>CMD输入：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld --initialize --console</span><br></pre></td></tr></table></figure><p><img src="https://pic-1254245913.cos.ap-shanghai.myqcloud.com/img/image-20210602220544013.png" alt="image-20210602220544013"></p><p>记住这里的initial密码，开启服务</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">net</span> <span class="built_in">start</span> mysql</span><br></pre></td></tr></table></figure><h3 id="登录验证"><a href="#登录验证" class="headerlink" title="登录验证"></a>登录验证</h3><p>输入：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br><span class="line">(your password)</span><br></pre></td></tr></table></figure><p><img src="https://pic-1254245913.cos.ap-shanghai.myqcloud.com/img/image-20210602220711521.png" alt="image-20210602220711521"></p><h3 id="至此，环境配置结束，MySQL基本环境搭建完成"><a href="#至此，环境配置结束，MySQL基本环境搭建完成" class="headerlink" title="至此，环境配置结束，MySQL基本环境搭建完成"></a>至此，环境配置结束，MySQL基本环境搭建完成</h3>]]></content>
-      
-      
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[CFR705div2]题解A-E</title>
+    <url>/2021/06/02/%5BCFR705div2%5D%E9%A2%98%E8%A7%A3A-E/</url>
+    <content><![CDATA[<h2 id="CF-round-705-div2"><a href="#CF-round-705-div2" class="headerlink" title="CF round 705 div2"></a>CF round 705 div2</h2><h3 id="A"><a href="#A" class="headerlink" title="A"></a>A</h3><p>所有数小于$k$的集合的任意子集和不等于$k$的数最多有$\lceil \frac{k}{2}\rceil$个（$i和k-i只能存在一个$），注意到$n \geq k$ ，对于小于$k$的数，直接选$\lceil \frac{k}{2}\rceil$到$k-1$，对于大于$k$的数一定可以选。</p>
+<h3 id="B"><a href="#B" class="headerlink" title="B"></a>B</h3><p>模拟</p>
+<h3 id="C"><a href="#C" class="headerlink" title="C"></a>C</h3><p>如果当前位修改之后大于未修改的，那么这一位后面的所有位置都可以随便填字母；考虑到字典序最小，直接从后往前扫，假如当前扫到第$i$位（从右往左数，从1开始），枚举比这一位更大的字母，那么第$1到i-1$位可以随便填。只要能把前面的每个字母的数量补充到能够整除$k$那就直接输出。</p>
+<p>复杂度 $ O(26\times N) $</p>
+<p>此处需注意维护一下需要补充的数量，如果每次都计算一下补充的数量，复杂度则为 $ O(26\times 26\times N) $ 。</p>
+<h3 id="D"><a href="#D" class="headerlink" title="D"></a>D</h3><p>为每个质数因子维护一个数据结构。维护该质数 $ p $ 在位置 $ i $ 的最大 $ k_i $ ，使得 $ p^{k_i}|a_i $ 显然 $ \gcd={\prod_{p}{\min{k_i}}} $  每次乘以一个数 $ x $ 的时候，分解 $ x $ ，对 $ x $ 的每个因子进行维护，并且查该因子的 $ \min{k_i} $ 并更新 $ \gcd $</p>
+<h3 id="E"><a href="#E" class="headerlink" title="E"></a>E</h3><p>如果[l,r]中l和r的最高位不同，则答案为$11…1(直接取01…1\oplus10..0)$。</p>
+<p>如果相同：</p>
+<p>1）如果r为奇数，则答案为r。</p>
+<p>证明：（数学归纳法）</p>
+<p><img src="https://pic-1254245913.cos.ap-shanghai.myqcloud.com/img/image-20210604235158513.png" alt="image-20210604235158513"></p>
+<p>2）如果r为偶数</p>
+<p>I.若l&lt;=r-2,答案为r+1：</p>
+<p>证明:我们直接选取[r-2,r]，此时答案为r+1，又由1)III中的R=r+1情形可知ans&lt;r+2，则最大为r+1</p>
+<p>II.若l=r-1,则可选区间为[l+1,l+1]，[l,l+1],[l,l]，其中最大为[l+1,l+1]，答案为r</p>
+<p>III.若l=r,则答案为r</p>
+]]></content>
       <categories>
-          
-          <category> MySQL </category>
-          
+        <category>题解</category>
+        <category>CF题解</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> MySQL </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>序 / Introduction</title>
-      <link href="/about/"/>
-      <url>/about/</url>
-      
-        <content type="html"><![CDATA[<blockquote><center>在自己消失之前<br>心怀不想消失的愿望<br>希望让某个人记住我<br>希望能留下羁绊<br>我这么希望着<br>又有什么不可以的吗</center></blockquote><center>你好 欢迎来到Khoray's Blog</center><center>这里会发一些学习心得 题解 技术文章</center><center>望持续关注0.0</center>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>我的第一个博客</title>
-      <link href="2021/06/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/"/>
-      <url>2021/06/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/</url>
-      
-        <content type="html"><![CDATA[<p>博客搭建参考： <a class="btn-beautify button--animated red larger" href="https://www.bearchild.top/2021/05/20/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/Github+Hexo%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/"   title="BearChild建站记录"><i class="far fa-hand-point-right"></i><span>BearChild建站记录</span></a></p>]]></content>
-      
-      
+      <tags>
+        <tag>CF题解</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的第一个博客</title>
+    <url>/2021/06/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<p>博客搭建参考： <a class="btn-beautify button--animated red larger" href="https://www.bearchild.top/2021/05/20/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/Github+Hexo%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/" 
+  title="BearChild建站记录"><i class="far fa-hand-point-right"></i><span>BearChild建站记录</span></a></p>
+]]></content>
       <categories>
-          
-          <category> 网站搭建 </category>
-          
+        <category>网站搭建</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 网站搭建 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
-    
-    
-    <entry>
-      <title>categories</title>
-      <link href="categories/index.html"/>
-      <url>categories/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>tags</title>
-      <link href="tags/index.html"/>
-      <url>tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-  
+      <tags>
+        <tag>网站搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>序 / Introduction</title>
+    <url>//about/</url>
+    <content><![CDATA[<blockquote><center>在自己消失之前<br>心怀不想消失的愿望<br>希望让某个人记住我<br>希望能留下羁绊<br>我这么希望着<br>又有什么不可以的吗</center></blockquote>
+
+<center>你好 欢迎来到Khoray's Blog</center>
+
+<center>这里会发一些学习心得 题解 技术文章</center>
+
+<center>望持续关注0.0</center>
+]]></content>
+  </entry>
+  <entry>
+    <title>git的使用</title>
+    <url>//githelp/</url>
+    <content><![CDATA[<h2 id="git的基本使用"><a href="#git的基本使用" class="headerlink" title="git的基本使用"></a>git的基本使用</h2><ol>
+<li><p>git初始化</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>git添加/删除文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git add/rm [filename]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>git commit</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git commit -m &quot;commit content&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>git远程连接</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git remote add [shortname] [url]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>git设置config</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">git config --global [key] [value]</span><br><span class="line">git config --global user.name [value]  //username</span><br><span class="line">git config --global user.mail [value]  //usermail</span><br><span class="line">git config --global http.proxy [value] //proxy</span><br><span class="line">git config --global https.proxy [value]//proxy</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>git push</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">git push -u [shortname] [branch]</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>categories</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>tags</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
 </search>

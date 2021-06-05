@@ -1688,7 +1688,7 @@ blockquote footer cite:before {
 #article-container pre,
 #article-container code {
   font-size: var(--global-font-size);
-  font-family: Consolas,Symbol,'Microsoft Sans Serif','微软雅黑' !important;
+  font-family: consola,Symbol,'Microsoft Sans Serif','微软雅黑' !important;
 }
 #article-container code {
   padding: 0.1rem 0.2rem;
